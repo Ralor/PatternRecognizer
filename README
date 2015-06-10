@@ -9,7 +9,7 @@ Backlog:
     - User want to adjust contour width and color, so there must be some kind of standart dialog window to do that and some standart painting functions.
 
 Features:
-    > render image in Qt (???) GUI
+    > render image in Qt GUI
     >> set up treshold adjustment
     >> paint static line on image
     >> provide customization for line width and color
@@ -23,13 +23,19 @@ Waiting:
     - remember standart qt elements: adjuster, textedit, label, button, openfile dialog, color dialog
     - find appropriate GoF pattern for plugins
     - find library/mechanism for plugin loading
-
-WIP:
-    - find an algorithm for circle
-    - find an algorithm for rectangle
+	- find an algorithm for circle
     - find an algorithm for triangle
-    - make successful attempt of tresholding and displaying the result somehow
+	- find an algorithm for rectangle
+	- make successful attempt of tresholding and displaying the result with highgui
+	
+WIP:
+	- create makefil/*.pro or smth that compiles helloworld
+    -- compile opencv using cmake and WITH_QT = 1 option (what that means?) (to get *.lib)
     
+DONE:
+    - install opencv
+    
+	
 REFERENCES:
 
 tresholding:
@@ -41,10 +47,13 @@ search squares: https://github.com/Itseez/opencv/blob/master/samples/cpp/squares
 matchShapes(): http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html
 
 makefile: http://habrahabr.ru/post/155201/
+opencv install: http://kevinhughes.ca/tutorials/opencv-install-on-windows-with-codeblocks-and-mingw/
+
 qt+opencv image processing: http://stackoverflow.com/questions/10158740/efficient-integration-of-qt-and-opencv
 
 opencv coding style guide: http://code.opencv.org/projects/opencv/wiki/CodingStyleGuide
-    
+
+	
 OVERVIEW:
     
     
