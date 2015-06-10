@@ -1,0 +1,6 @@
+NAME_ID_TYPE_COUNT.jpg
+
+NAME: name of pattern
+ID: identificator
+TYPE: 0 - sample test, 1 - white paper, 2 - yellow paper with shadow, 3 - yellow paper with complicated object
+COUNT: how many patterns should be found

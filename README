@@ -1,0 +1,60 @@
+PatternRecognizer 1.0 by
+Zakharov Konstantin aka Ralor
+<e-mail:zakharov.k.l@yandex.ru>
+<skype:ralor-real>
+
+Backlog:
+    - User want to recognize contour of circle, rectangle and triangle from loaded jpg, so I'm supposed to design a simple algorithms using appropriate opencv functions.
+    - User want a plugin system, so I need to find some kind of architectural pattern and C++ plugins library/mechanism.
+    - User want to adjust contour width and color, so there must be some kind of standart dialog window to do that and some standart painting functions.
+
+Features:
+    > render image in Qt (???) GUI
+    >> set up treshold adjustment
+    >> paint static line on image
+    >> provide customization for line width and color
+    
+    > find patterns on jpg using specified treshold
+    >> parse file name
+    >> find count of patterns on image
+
+Waiting:
+    - render binary ovencv image (after tresholding) on qt window
+    - remember standart qt elements: adjuster, textedit, label, button, openfile dialog, color dialog
+    - find appropriate GoF pattern for plugins
+    - find library/mechanism for plugin loading
+
+WIP:
+    - find an algorithm for circle
+    - find an algorithm for rectangle
+    - find an algorithm for triangle
+    - make successful attempt of tresholding and displaying the result somehow
+    
+REFERENCES:
+
+tresholding:
+    http://docs.opencv.org/doc/tutorials/imgproc/threshold/threshold.html
+    http://robocraft.ru/blog/computervision/357.html 
+canny: http://robocraft.ru/blog/computervision/484.html 
+countour analysis: http://robocraft.ru/blog/computervision/640.html 
+search squares: https://github.com/Itseez/opencv/blob/master/samples/cpp/squares.cpp
+matchShapes(): http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html
+
+makefile: http://habrahabr.ru/post/155201/
+qt+opencv image processing: http://stackoverflow.com/questions/10158740/efficient-integration-of-qt-and-opencv
+
+opencv coding style guide: http://code.opencv.org/projects/opencv/wiki/CodingStyleGuide
+    
+OVERVIEW:
+    
+    
+LICENSE:
+    This source has been released "As is", you can you use it as you want.
+    See LICENSE for details.
+    
+COMPILING:
+    Provided code was compiled with gcc 4.8.1 (tdm-2).
+    See BUILDING for details.
+    
+NOTES:
+    Please report bugs to me via email.
