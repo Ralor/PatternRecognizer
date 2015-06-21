@@ -9,32 +9,39 @@ Backlog:
     - User want to adjust contour width and color, so there must be some kind of standart dialog window to do that and some standart painting functions.
 
 Features:
-    > render image in Qt GUI
+    > (+) render image in Qt GUI
     >> set up treshold adjustment
-    >> paint static line on image
+    >> (+) paint static line on image 
     >> provide customization for line width and color
     
     > find patterns on jpg using specified treshold
     >> parse file name
+	>> (+) load plugin
     >> find count of patterns on image
 
 Waiting:
-    - render binary ovencv image (after tresholding) on qt window
     - remember standart qt elements: adjuster, textedit, label, button, openfile dialog, color dialog
-    - find appropriate GoF pattern for plugins
-    - find library/mechanism for plugin loading
 	- find an algorithm for circle
     - find an algorithm for triangle
 	- find an algorithm for rectangle
-	- make successful attempt of tresholding and displaying the result with highgui
+	- set custom library path for app (smth like "../lib/" instead of %PATH%)
+	- (*) set costom library path for plugins (instead of placing them into "../lib/")
+	- make tresholdind parameters adjustable via GUI (+ autorepaint <<onRelease>>)
+	- get any working plugin via IPlugin interface
 	
 WIP:
-	- create makefil/*.pro or smth that compiles helloworld
-    -- compile opencv using cmake and WITH_QT = 1 option (what that means?) (to get *.lib)
-    
+	- render binary ovencv image (after tresholding) on QWidget
+	- embed custom QWidget into usual Qt GUI
+    - test found algorithm for rectangle
+	
 DONE:
     - install opencv
-    
+    - create makefil/*.pro or smth that compiles helloworld
+    -- compile shared opencv libs using cmake and WITH_QT = 1 option (what that means?)
+	-- find appropriate "LIBS +=" line
+	- render image on QWidget with QPainte, paint static line on it
+	- find library/mechanism for plugin loading
+	- find appropriate GoF pattern for plugins (adapter IPlugin)
 	
 REFERENCES:
 
@@ -47,13 +54,16 @@ search squares: https://github.com/Itseez/opencv/blob/master/samples/cpp/squares
 matchShapes(): http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html
 
 makefile: http://habrahabr.ru/post/155201/
-opencv install: http://kevinhughes.ca/tutorials/opencv-install-on-windows-with-codeblocks-and-mingw/
 
+c::b+mingw+opencv installation: http://kevinhughes.ca/tutorials/opencv-install-on-windows-with-codeblocks-and-mingw/
+qt+opencv compile/install (!!!): http://www.laganiere.name/opencvCookbook/chap1s1_2.shtml
 qt+opencv image processing: http://stackoverflow.com/questions/10158740/efficient-integration-of-qt-and-opencv
+
+deploy qt plugins: http://doc.qt.io/qt-5/deployment-plugins.html
+deploy qt apps: http://doc.qt.io/qt-5/deployment.html
 
 opencv coding style guide: http://code.opencv.org/projects/opencv/wiki/CodingStyleGuide
 
-	
 OVERVIEW:
     
     
