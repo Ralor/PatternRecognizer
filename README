@@ -8,6 +8,8 @@ Backlog:
     - User want a plugin system, so I need to find some kind of architectural pattern and C++ plugins library/mechanism.
     - User want to adjust contour width and color, so there must be some kind of standart dialog window to do that and some standart painting functions.
 
+	- (*) User want to use webcamera
+	
 Features:
     > (+) render image in Qt GUI
     >> set up treshold adjustment
@@ -25,48 +27,36 @@ Waiting:
     - find an algorithm for triangle
 	- find an algorithm for rectangle
 	- set custom library path for app (smth like "../lib/" instead of %PATH%)
-	- (*) set costom library path for plugins (instead of placing them into "../lib/")
+	- (*) set custom library path for plugins (instead of placing them into "../lib/")
 	- make tresholdind parameters adjustable via GUI (+ autorepaint <<onRelease>>)
-	- get any working plugin via IPlugin interface
+	- get any working plugin via IPlugin interface (to get template)
+	- (*) paint plugin tester
 	
 WIP:
-	- render binary ovencv image (after tresholding) on QWidget
+	- look at Canny results with/without tresholding
 	- embed custom QWidget into usual Qt GUI
-    - test found algorithm for rectangle
+    - test found algorithms for rectangle
+	- create IPlugin interface
 	
 DONE:
     - install opencv
     - create makefil/*.pro or smth that compiles helloworld
     -- compile shared opencv libs using cmake and WITH_QT = 1 option (what that means?)
-	-- find appropriate "LIBS +=" line
-	- render image on QWidget with QPainte, paint static line on it
+	-- find appropriate "LIBS +=" and line
+	- render image on QWidget with QPainter, paint static line on it
 	- find library/mechanism for plugin loading
 	- find appropriate GoF pattern for plugins (adapter IPlugin)
 	
 REFERENCES:
 
-tresholding:
-    http://docs.opencv.org/doc/tutorials/imgproc/threshold/threshold.html
-    http://robocraft.ru/blog/computervision/357.html 
-canny: http://robocraft.ru/blog/computervision/484.html 
-countour analysis: http://robocraft.ru/blog/computervision/640.html 
-search squares: https://github.com/Itseez/opencv/blob/master/samples/cpp/squares.cpp
 matchShapes(): http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html
 
-makefile: http://habrahabr.ru/post/155201/
-
-c::b+mingw+opencv installation: http://kevinhughes.ca/tutorials/opencv-install-on-windows-with-codeblocks-and-mingw/
-qt+opencv compile/install (!!!): http://www.laganiere.name/opencvCookbook/chap1s1_2.shtml
-qt+opencv image processing: http://stackoverflow.com/questions/10158740/efficient-integration-of-qt-and-opencv
-
-deploy qt plugins: http://doc.qt.io/qt-5/deployment-plugins.html
-deploy qt apps: http://doc.qt.io/qt-5/deployment.html
-
-opencv coding style guide: http://code.opencv.org/projects/opencv/wiki/CodingStyleGuide
+(*) opencv coding style guide: http://code.opencv.org/projects/opencv/wiki/CodingStyleGuide
+(*) enable webcamera: http://robocraft.ru/blog/computervision/420.html
 
 OVERVIEW:
     
-    
+	
 LICENSE:
     This source has been released "As is", you can you use it as you want.
     See LICENSE for details.
