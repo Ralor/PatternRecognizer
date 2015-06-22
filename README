@@ -3,25 +3,29 @@ Zakharov Konstantin aka Ralor
 <e-mail:zakharov.k.l@yandex.ru>
 <skype:ralor-real>
 
+Please don't look at my ugly code. Continuous XP is a bad practice.
+
+![ ](https://raw.githubusercontent.com/Ralor/PatternRecognizer/master/screenshot.jpg)
+
 Backlog:
-    - User want to recognize contour of circle, rectangle and triangle from loaded jpg, so I'm supposed to design a simple algorithms using appropriate opencv functions.
-    - User want a plugin system, so I need to find some kind of architectural pattern and C++ plugins library/mechanism.
-    - User want to adjust contour width and color, so there must be some kind of standart dialog window to do that and some standart painting functions.
+	- User want to recognize contour of circle, rectangle and triangle from loaded jpg, so I'm supposed to design a simple algorithms using appropriate opencv functions.
+	- User want a plugin system, so I need to find some kind of architectural pattern and C++ plugins library/mechanism.
+	- User want to adjust contour width and color, so there must be some kind of standart dialog window to do that and some standart painting functions.
 
 	- (*) User want to use webcamera, so I need to update QWidget with new image faster.
 	- (*) User want to recognize images better, so I need to power up some alogrithms and give user some ability of customizing initial data.
 	- (*) User want to know what plugin is better, so I need autotesting utility to know percentage of passed tests.
 	
 Features:
-    > (+) render image in Qt GUI
-    >> set up treshold adjustment
-    >> (+) paint static line on image 
-    >> provide customization for line width and color
-    
-    > find patterns on jpg using specified treshold
-    >> parse file name
+	> (+) render image in Qt GUI
+	>> set up treshold adjustment
+	>> (+) paint static line on image 
+	>> provide customization for line width and color
+	
+	> find patterns on jpg using specified treshold
+	>> parse file name
 	>> (+) load plugin
-    >> find count of patterns on image
+	>> find count of patterns on image
 	
 	> add plugin
 	>> import *.dll to "../lib/"
@@ -44,9 +48,9 @@ WIP:
 
 	
 DONE:
-    - install opencv
-    - create makefil/*.pro or smth that compiles helloworld
-    -- compile shared opencv libs using cmake and WITH_QT = 1 option (what that means?)
+	- install opencv
+	- create makefil/*.pro or smth that compiles helloworld
+	-- compile shared opencv libs using cmake and WITH_QT = 1 option (what that means?)
 	-- find appropriate "LIBS +=" and line
 	- render image on QWidget with QPainter, paint static line on it
 	- find library/mechanism for plugin loading
@@ -69,12 +73,12 @@ OVERVIEW:
     
 	
 LICENSE:
-    This source has been released "As is", you can you use it as you want.
-    See LICENSE for details.
+	This source has been released "As is", you can you use it as you want.
+	See LICENSE for details.
     
 COMPILING:
-    Provided code was compiled with gcc 4.8.1 (tdm-2).
-    See BUILDING for details.
+	Provided code was compiled with gcc 4.8.1 (tdm-2).
+	See BUILDING for details.
     
 NOTES:
-    Please report bugs to me via email.
+	Please report bugs to me via email.
