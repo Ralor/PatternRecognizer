@@ -5,7 +5,7 @@ Zakharov Konstantin aka Ralor
 
 Please don't look at my ugly code. Continuous XP is a bad practice.
 
-![ ](https://raw.githubusercontent.com/Ralor/PatternRecognizer/master/screenshot.jpg)
+![screenshot](https://raw.githubusercontent.com/Ralor/PatternRecognizer/master/screenshot.jpg)
 
 Backlog:
 	- User want to recognize contour of circle, rectangle and triangle from loaded jpg, so I'm supposed to design a simple algorithms using appropriate opencv functions.
@@ -15,37 +15,20 @@ Backlog:
 	- (*) User want to use webcamera, so I need to update QWidget with new image faster.
 	- (*) User want to recognize images better, so I need to power up some alogrithms and give user some ability of customizing initial data.
 	- (*) User want to know what plugin is better, so I need autotesting utility to know percentage of passed tests.
-	
-Features:
-	> (+) render image in Qt GUI
-	>> set up treshold adjustment
-	>> (+) paint static line on image 
-	>> provide customization for line width and color
-	
-	> find patterns on jpg using specified treshold
-	>> parse file name
-	>> (+) load plugin
-	>> find count of patterns on image
-	
-	> add plugin
-	>> import *.dll to "../lib/"
-	>> provide list of dlls
-	>> specify shape preferences
 
 Waiting:
 	- power up recognition algorithms
 	-- look at Canny results with/without tresholding
 	-- make tresholdind parameters adjustable via GUI (+ autorepaint <<onRelease>>)
 	-- adjust color levels for tests with high difficulty
-	- compile RectangleRecognizer.dll
-	- compile CircleRecognizer.dll
 	- transfer projects to git repo
 	- (*) set custom library path for app (smth like "../lib/" instead of %PATH%)
 	- (*) set custom library path for plugins (instead of placing them into "../lib/")
 	- (*) paint plugin tester
 	
 WIP:
-
+	- compile RectangleRecognizer.dll
+	- compile CircleRecognizer.dll
 	
 DONE:
 	- install opencv
