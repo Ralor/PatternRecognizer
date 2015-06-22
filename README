@@ -32,17 +32,16 @@ Waiting:
 	- power up recognition algorithms
 	-- look at Canny results with/without tresholding
 	-- make tresholdind parameters adjustable via GUI (+ autorepaint <<onRelease>>)
+	-- adjust color levels for tests with high difficulty
+	- compile RectangleRecognizer.dll
+	- compile CircleRecognizer.dll
+	- transfer projects to git repo
 	- (*) set custom library path for app (smth like "../lib/" instead of %PATH%)
 	- (*) set custom library path for plugins (instead of placing them into "../lib/")
 	- (*) paint plugin tester
 	
 WIP:
-	- embed custom QWidget into usual Qt GUI
-	-- remember standart qt elements: adjuster, textedit, label, button, openfile dialog, color dialog
-	-- QWidget features : set image, paint contour, set line color, use specified plugin, repaint contour
-	
-	- create ITestMethod plugin interface (Mat& in, vector<vector<Point>>& out)
-	-- create any valid plugin of ITestMethod and use it as template to populate others
+
 	
 DONE:
     - install opencv
@@ -52,9 +51,14 @@ DONE:
 	- render image on QWidget with QPainter, paint static line on it
 	- find library/mechanism for plugin loading
 	- find appropriate GoF pattern for plugins (adapter IPlugin)
-	- find an algorithm for triangle (works ok)
+	- find an algorithm for triangle (works approx ok)
 	- find an algorithm for circle (works bad)
 	- find an algorithm for rectangle (works bad)
+	- create ITestMethod plugin interface (Mat& in, vector<vector<Point>>& out)
+	-- create any valid plugin of ITestMethod and use it as template to populate others
+	- embed custom QWidget into usual Qt GUI
+	-- remember standart qt elements: adjuster, textedit, label, button, openfile dialog, color dialog
+	-- QWidget features : set image, paint contour with specified plugin, set line color
 	
 REFERENCES:
 
