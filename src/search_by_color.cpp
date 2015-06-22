@@ -6,8 +6,9 @@
 // http://robocraft.ru/blog/computervision/365.html
 //
 
-#include <opencv2/cv.h>
-#include <opencv2/highgui.h>
+#include <opencv/cv.h>
+#include <opencv/highgui.h>
+#include <opencv/cxcore.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -73,7 +74,7 @@ void myTrackbarBmax(int pos) {
 int main(int argc, char* argv[])
 {
         // имя картинки задаётся первым параметром
-        char* filename = argc == 2 ? argv[1] : "../tests/rectangle_5_1_6.jpg";
+        const char* filename = argc == 2 ? argv[1] : "../tests/rectangle_5_1_6.jpg";
         // получаем картинку
         image = cvLoadImage(filename,1);
 
@@ -90,7 +91,7 @@ int main(int argc, char* argv[])
         b_range = cvCreateImage( cvGetSize(image), IPL_DEPTH_8U, 1 );
         rgb_and = cvCreateImage( cvGetSize(image), IPL_DEPTH_8U, 1 );
         //  копируем
-        cvCopyImage(image, rgb);
+        cvCopy(image, rgb);
         // разбиваем на отельные каналы
         cvSplit( rgb, b_plane, g_plane, r_plane, 0 );
 

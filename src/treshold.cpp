@@ -5,8 +5,8 @@
 // http://robocraft.ru/blog/computervision/357.html
 //
 
-#include <opencv2/cv.h>
-#include <opencv2/highgui.h>
+#include <opencv/cv.h>
+#include <opencv/highgui.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
         IplImage *src=0, *dst=0, *dst2=0;
 
         // имя картинки задаётся первым параметром
-        char* filename = argc >= 2 ? argv[1] : "../tests/rectangle_5_1_6.jpg";
+        const char* filename = argc >= 2 ? argv[1] : "../tests/rectangle_5_1_6.jpg";
         // получаем картинку
         src = cvLoadImage(filename, 0);
 

@@ -5,8 +5,8 @@
 // http://robocraft.ru/blog/computervision/375.html
 //
 
-#include <opencv2/cv.h>
-#include <opencv2/highgui.h>
+#include <opencv/cv.h>
+#include <opencv/highgui.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -16,7 +16,7 @@ int main(int argc, char* argv[])
         IplImage* r=0, *g=0, *b=0; // для хранения отдельных слоёв RGB-изображения
 
         // имя картинки задаётся первым параметром
-        char* filename = argc >= 2 ? argv[1] : "../tests/rectangle_5_1_6.jpg";
+        const char* filename = argc >= 2 ? argv[1] : "../tests/rectangle_5_1_6.jpg";
         // получаем картинку
         image = cvLoadImage(filename, 1);
 
