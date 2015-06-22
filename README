@@ -5,8 +5,6 @@ Zakharov Konstantin aka Ralor
 
 Please don't look at my ugly code. Continuous XP is a bad practice.
 
-![screenshot](https://raw.githubusercontent.com/Ralor/PatternRecognizer/master/screenshot.jpg)
-
 Backlog:
 	- User want to recognize contour of circle, rectangle and triangle from loaded jpg, so I'm supposed to design a simple algorithms using appropriate opencv functions.
 	- User want a plugin system, so I need to find some kind of architectural pattern and C++ plugins library/mechanism.
