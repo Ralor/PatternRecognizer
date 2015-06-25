@@ -1,2 +1,2 @@
-#include "trianglerecognizer.h"
+#include <trianglerecognizer.h>
 

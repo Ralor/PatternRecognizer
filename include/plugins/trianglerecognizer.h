@@ -1,7 +1,7 @@
 #ifndef TRIANGLERECOGNIZER_H
 #define TRIANGLERECOGNIZER_H
 
-#include "trianglerecognizer_global.h"
+#include <trianglerecognizer_global.h>
 
 #include <QObject>
 #include <QString>
@@ -20,7 +20,7 @@ class TRIANGLERECOGNIZERSHARED_EXPORT TriangleRecognizer :
         public ITestMethod
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID "PatternRecognizer.TriangleRecognizer" FILE "trianglerecognizer.json")
+    Q_PLUGIN_METADATA(IID "PatternRecognizer.TriangleRecognizer")
     Q_INTERFACES(IVerbosePlugin ITestMethod)
 public:
     TriangleRecognizer() { }
@@ -28,7 +28,8 @@ public:
         return "triangle";
     }
     virtual QString getDescription() const {
-        return "use Canny, ";
+        return "Use Canny on grayscale image with thresholds 100 and 300, use findContours and approxPolyDP with \
+                empirical epsilon based on found contour length";
     }
     virtual int successPercentage() const {
         return 40;
@@ -37,9 +38,8 @@ public:
         cv::Mat img_gray;
         cv::cvtColor(image, img_gray, CV_RGB2GRAY);
 
-        const int thresh = 100;
         cv::Mat canny_output;
-        cv::Canny(img_gray, canny_output, thresh, 3 * thresh, 3);
+        cv::Canny(img_gray, canny_output, 100, 300, 3);
 
         std::vector<std::vector<cv::Point>> temp_contours;
         std::vector<cv::Vec4i> hierarchy;

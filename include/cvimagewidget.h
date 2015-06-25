@@ -18,7 +18,7 @@
 
 #include <vector>
 
-#include <plugin_interfaces.h>
+#include <plugins/plugin_interfaces.h>
 
 class CVImageWidget : public QWidget
 {

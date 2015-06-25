@@ -13,11 +13,11 @@ CONFIG += c++11
 
 DEFINES += TRIANGLERECOGNIZER_LIBRARY
 
-SRC_DIR = ../src
-INC_DIR = ../include
-LIB_DIR = ../lib
-RES_DIR = ../resources
-BIN_DIR = ../bin
+SRC_DIR = $${PWD}/../src
+INC_DIR = $${PWD}/../include
+LIB_DIR = $${PWD}/../lib
+RES_DIR = $${PWD}/../resources
+BIN_DIR = $${PWD}/../bin
 
 SOURCES += \
 	$${SRC_DIR}/trianglerecognizer.cpp
@@ -37,8 +37,7 @@ LIBS += \
 	-lopencv_imgproc300.dll \
 	-lopencv_highgui300.dll
 
-DESTDIR = $${BIN_DIR}/plugins
+DESTDIR = $${BIN_DIR}
 
 OTHER_FILES += \
 	$${RES_DIR}/trianglerecognizer.json
-
