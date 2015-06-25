@@ -4,19 +4,23 @@ Zakharov Konstantin aka Ralor
 <skype:ralor-real>
 
 OVERVIEW:
-    Computer vision and image processing is very interesting field of research, study and business today. 
-	This application was implemented as internship proposal to software development company 
-	named "Rubius" http://rubius.com/about/ which works in that direction.
+    Computer vision and image processing is very interesting field of research, 
+	study and business today. PatternRecognizer was implemented as summer 
+	internship proposal to software development company named 
+	"Rubius" http://rubius.com/about/ which works in that direction.
 	
 RUNNING:
-	Run /bin/PatternRecognizer.exe and load plugins from same folder (for example, /bin/TriangleRecognizer.dll).
-	All runtime libraries and resources are included.
+	Run /bin/PatternRecognizer.exe and load plugins from same folder 
+	(for example, /bin/TriangleRecognizer.dll).	All runtime libraries and 
+	resources are included.
 	
 COMPILING:
 	- Full Opencv 3.0.0 is included as shared libraries:
-	-- /lib folder contains *.dll.a files for static link (they are just pointing to dlls)
+	-- /lib folder contains *.dll.a files for static link (they are 
+		just pointing to dlls)
 	-- /bin folder contains *.dll files for dynamic link
-	- Qt 5.3.0 is not fully included, but several required Qt and runtime dlls are in /bin. Source code support only Qt5+ versions.
+	- Qt 5.3.0 is not fully included, but several required Qt and 
+		runtime dlls are in /bin. Source code support only Qt5+ versions.
 	- Sources were compiled with mingw:
 	-- gcc version: 4.8.2 (i686-posix-dwarf-rev3, Build by MinGW-W64 project)
 	-- Target: i686-w64-mingw32
