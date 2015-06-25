@@ -24,11 +24,13 @@ Waiting:
 	-- save/load configuration (mb using file I/O, or <QSettings>)
 	
 WIP:
-	- set up project (gui + 3 dlls) building with "subdirs" template. *qmake is preffered as it may be used for 
-		autotesting (also, opencv is already included in project so there is almost no fee from cmake).
+	- create CircleRecognizer.dll and RectangleRecognizer.dll with simple interfaces
 	- refactoring
 	-- create "PluginManager" class to load/unload plugin and configure it in consistent way
 	-- extract plugin management from СvImageWidget (it's canvas, not file management system)
+	- bugfix
+	-- remove warnings
+	-- set up normal plugin description output
 	
 DONE:
 	- install opencv
@@ -46,6 +48,7 @@ DONE:
 	- embed custom QWidget into usual Qt GUI
 	-- remember standart qt elements: adjuster, textedit, label, button, openfile dialog, color dialog
 	-- QWidget features : set image, paint contour with specified plugin, set line color
+	- set up project (gui + dll) building with "subdirs" template. 
 	
 REFERENCES:
 
