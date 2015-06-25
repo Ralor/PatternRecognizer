@@ -1,9 +1,15 @@
-Currently Qt projects are in /src folder.
+Project building implemented with qmake subdirs template.
 
+Run /pro/build_subdirs.pro with Qt Creator (QT 5+) and specify prefferable building directory.
+It's better to avoid any non-english letters in your paths. My own advice is to create build folder
+right near PatterRecognizer folder.
 
-Helloworlds (standalone *.cpp file) from /src was compiled with:
+All applications (*.exe), plugins (*.dll; *.dll.a), required resources and runtime libs will be in /bin.
 
-C:\Qt\Qt5.3.0\Tools\mingw482_32\bin\g++.exe helloworld.cpp -I"../include" "C:/opencv/build/x86/mingw/install/x86/mingw/lib/*.a" -o hw.exe
+Standalone *.cpp files from /usedsnippets can be compiled with smth like:
 
-Simply put resulting exe in "libs" and it would work
+C:\Qt\Qt5.3.0\Tools\mingw482_32\bin\g++.exe helloworld.cpp -I"../include" "../lib/*.a" -o hw.exe
+
+Put resulting *.exe file to /bin and it would work.
+
 

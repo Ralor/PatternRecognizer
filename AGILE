@@ -1,0 +1,82 @@
+Please don't look at my ugly code. Continuous XP is a bad practice.
+
+Backlog:
+	- User want to recognize contour of circle, rectangle and triangle 
+		from loaded jpg, so I'm supposed to design a simple algorithms 
+		using appropriate opencv functions.
+	- User want a plugin system, so I need to find some kind of 
+		architectural pattern and C++ plugins library/mechanism.
+	- User want to adjust contour width and color, so there must be 
+		some kind of standart dialog window to do that and some standart 
+		painting functions.
+
+	- (*) User want to use webcamera, so I need to update QWidget with
+		new image faster.
+	- (*) User want to recognize images better, so I need to power up 
+		some alogrithms and give user some ability of customizing 
+		algorithm.
+	- (*) Developer want to know about algorithm problems, so I need 
+		to set up autotesting on build to know percentage of 
+		passed tests.
+
+Waiting:
+	- power up recognition algorithms
+	-- use hsv to defeat shadows
+	-- let user to configure the plugin
+	-- remove doubles using matchShape or it's analogue
+	- provide an interface for plugin configuration 
+	-- set tresholding levels with highgui or QWidget
+	-- save/load configuration (mb using file I/O, or <QSettings>)
+	
+WIP:
+	- create CircleRecognizer.dll and RectangleRecognizer.dll with 
+		simple interfaces
+	- refactoring
+	-- create "PluginManager" class to load/unload plugin and 
+		configure it in consistent way
+	-- extract plugin management from СvImageWidget (it's canvas, 
+		not file management system)
+	- bugfix
+	-- remove warnings
+	-- set up normal plugin description output
+	
+DONE:
+	- install opencv
+	- create makefil/*.pro or smth that compiles helloworld
+	-- compile shared opencv libs using cmake and WITH_QT = 1 
+		option (what that means?)
+	-- find appropriate "LIBS +=" and line
+	- render image on QWidget with QPainter, paint static line on it
+	- find library/mechanism for plugin loading
+	- find appropriate GoF pattern for plugins (adapter IPlugin)
+	- find an algorithm for triangle (works approx ok)
+	- find an algorithm for circle (works bad)
+	- find an algorithm for rectangle (works bad)
+	- create ITestMethod plugin interface 
+		(Mat& in, vector<vector<Point>>& out)
+	-- create any valid plugin of ITestMethod and use it as 
+		template to populate others
+	- embed custom QWidget into usual Qt GUI
+	-- remember standart qt elements: adjuster, textedit, 
+		label, button, openfile dialog, color dialog
+	-- QWidget features : set image, paint contour with 
+		specified plugin, set line color
+	- set up project (gui + dll) building with "subdirs" template. 
+	
+REFERENCES:
+
+hsv color scheme (contour distortions caused by shadows can be 
+reduced to minimum in this way):
+	http://robocraft.ru/blog/computervision/402.html
+(*) unittest with qmake:
+	http://www.3dh.de/3dh.de/2006/12/19/qt-automated-unit-tests-with-qmake/
+(*) shadow detection:
+	http://arxiv.org/abs/1304.1233
+	http://www.inf.unideb.hu/~ssip/teams/team6/index.html
+(*) shadow removal:
+	http://infoscience.epfl.ch/record/111781/files/piecewise_shadows.pdf
+	http://www.inf.unideb.hu/~ssip/teams/team6/project.html
+(*) opencv coding style guide: 
+	http://code.opencv.org/projects/opencv/wiki/CodingStyleGuide
+(*) enable webcamera: 
+	http://robocraft.ru/blog/computervision/420.html
