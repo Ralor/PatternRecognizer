@@ -24,9 +24,13 @@ Waiting:
 	-- use hsv to defeat shadows
 	-- let user to configure the plugin
 	-- remove doubles using matchShape or it's analogue
+	-- try to use corner detection + bruteforce or houghlines to overcome all issues about intersecting patterns
+	-- try to overcome issues about rounded corners with houghlines
+	-- try to close the gaps in contours with morphological closing
 	- provide an interface for plugin configuration 
-	-- set tresholding levels with highgui or QWidget
+	-- set adjustable parameters in <<more or less advanced>> plugins
 	-- save/load configuration (mb using file I/O, or <QSettings>)
+	-- provide visualized algorithm parameters adjustment (highgui widgets with trackbars)
 	
 WIP:
 	- create CircleRecognizer.dll and RectangleRecognizer.dll with 
@@ -62,12 +66,20 @@ DONE:
 	-- QWidget features : set image, paint contour with 
 		specified plugin, set line color
 	- set up project (gui + dll) building with "subdirs" template. 
+	- research about intersecting patterns, contour gaps, rounded corners and shadows
 	
 REFERENCES:
 
 hsv color scheme (contour distortions caused by shadows can be 
 reduced to minimum in this way):
 	http://robocraft.ru/blog/computervision/402.html
+houghlines usage for rounded corners (+ tutorial about straight contours):
+	http://stackoverflow.com/questions/14269509/detect-corner-point-from-rectangle-with-rounded-corners
+remove double lines by houghlines with theta parameter reduce:
+	http://stackoverflow.com/questions/21121674/more-accurate-houghline-opencv
+closing gaps in contours:
+	http://stackoverflow.com/questions/12508049/opencv-getting-edges-that-are-connected
+	
 (*) unittest with qmake:
 	http://www.3dh.de/3dh.de/2006/12/19/qt-automated-unit-tests-with-qmake/
 (*) shadow detection:
