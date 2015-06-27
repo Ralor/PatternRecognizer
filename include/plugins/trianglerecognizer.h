@@ -42,8 +42,7 @@ public:
         cv::Canny(img_gray, canny_output, 100, 300, 3);
 
         std::vector<std::vector<cv::Point>> temp_contours;
-        std::vector<cv::Vec4i> hierarchy;
-        findContours(canny_output, temp_contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0));
+        findContours(canny_output, temp_contours, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE);
 
         contours.clear();
         for(std::vector<cv::Point>& contour : temp_contours) {

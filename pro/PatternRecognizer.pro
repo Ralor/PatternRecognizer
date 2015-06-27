@@ -25,7 +25,8 @@ SOURCES += \
 HEADERS += \
 	$${INC_DIR}/mainwindow.h \
 	$${INC_DIR}/cvimagewidget.h \
-        $${INC_DIR}/plugins/plugin_interfaces.h
+        $${INC_DIR}/plugins/plugin_interfaces.h \
+        $${INC_DIR}/plugins/pluginmanager.h
 
 FORMS   += \
 	$${RES_DIR}/mainwindow.ui

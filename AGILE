@@ -27,23 +27,27 @@ Waiting:
 	-- try to use corner detection + bruteforce or houghlines to overcome all issues about intersecting patterns
 	-- try to overcome issues about rounded corners with houghlines
 	-- try to close the gaps in contours with morphological closing
-	- provide an interface for plugin configuration 
+	
+  - provide an interface for plugin configuration 
 	-- set adjustable parameters in <<more or less advanced>> plugins
 	-- save/load configuration (mb using file I/O, or <QSettings>)
 	-- provide visualized algorithm parameters adjustment (highgui widgets with trackbars)
+  -- allow user to pre-filter images with resize trick, blur, mb smth else
+  
+  - refactoring
+  -- set up classes, slots and signals in interface
 	
 WIP:
-	- create CircleRecognizer.dll and RectangleRecognizer.dll with 
-		simple interfaces
-	- refactoring
+  - refactoring
 	-- create "PluginManager" class to load/unload plugin and 
 		configure it in consistent way
 	-- extract plugin management from СvImageWidget (it's canvas, 
 		not file management system)
-	- bugfix
-	-- remove warnings
-	-- set up normal plugin description output
 	
+  - provide an interface for plugin configuration 
+  -- set up some mechanism to automate highgui widgets creation for configuration
+  -- save/load configuration using file I/O
+  
 DONE:
 	- install opencv
 	- create makefil/*.pro or smth that compiles helloworld
@@ -67,7 +71,8 @@ DONE:
 		specified plugin, set line color
 	- set up project (gui + dll) building with "subdirs" template. 
 	- research about intersecting patterns, contour gaps, rounded corners and shadows
-	
+	- create CircleRecognizer.dll and RectangleRecognizer.dll with 
+		simple interfaces
 REFERENCES:
 
 hsv color scheme (contour distortions caused by shadows can be 

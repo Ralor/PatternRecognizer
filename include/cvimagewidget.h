@@ -7,10 +7,8 @@
 #include <QObject>
 #include <QPluginLoader>
 #include <QDebug>
-#include <QTextStream>
 #include <QFile>
 #include <QFileInfo>
-#include <QStringList>
 
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp>
@@ -19,6 +17,7 @@
 #include <vector>
 
 #include <plugins/plugin_interfaces.h>
+#include <plugins/pluginmanager.h>
 
 class CVImageWidget : public QWidget
 {

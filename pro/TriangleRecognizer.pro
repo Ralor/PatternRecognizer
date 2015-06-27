@@ -20,7 +20,7 @@ RES_DIR = $${PWD}/../resources
 BIN_DIR = $${PWD}/../bin
 
 SOURCES += \
-	$${SRC_DIR}/trianglerecognizer.cpp
+        $${SRC_DIR}/plugins/trianglerecognizer.cpp
 
 HEADERS += \
 	$${INC_DIR}/plugins/trianglerecognizer.h \
@@ -38,6 +38,3 @@ LIBS += \
 	-lopencv_highgui300.dll
 
 DESTDIR = $${BIN_DIR}
-
-OTHER_FILES += \
-	$${RES_DIR}/trianglerecognizer.json
